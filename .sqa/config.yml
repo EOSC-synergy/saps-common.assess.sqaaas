@@ -1,58 +1,70 @@
 config:
   credentials: []
   project_repos:
-    github.com/EOSC-synergy/saps-common:
-      branch: develop
-      repo: https://github.com/EOSC-synergy/saps-common
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: 1.7.0_no_kubectl
+      branch: release/1.7.10
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/eosc-synergy/saps-common:
+      branch: develop
+      repo: https://github.com/eosc-synergy/saps-common
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      github.com/EOSC-synergy/saps-common git:
+      github.com/eosc-synergy/saps-common git:
         commands:
-        - /usr/bin/env sh .sqa/script.surly-wheat-dingo.sh
-        container: qc.acc_zippy-amethyst-uakari
+        - /usr/bin/env sh .sqa/script.scanty-rust-eagle.sh
+        container: qc.acc_cozy-denim-barb
   QC.Doc:
     repos:
-      github.com/EOSC-synergy/saps-common find_doc_files.py:
+      github.com/eosc-synergy/saps-common find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.sleazy-periwinkle-budgerigar.sh
-        container: qc.doc_chewy-scarlet-hare
-      github.com/EOSC-synergy/saps-common git:
+        - /usr/bin/env sh .sqa/script.trippy-orchid-dragonfly.sh
+        container: qc.doc_seedy-pink-goat
+      github.com/eosc-synergy/saps-common git:
         commands:
-        - /usr/bin/env sh .sqa/script.scaly-bistre-squid.sh
-        container: qc.doc_seedy-viridian-mayfly
-      github.com/EOSC-synergy/saps-common markdownlint:
+        - /usr/bin/env sh .sqa/script.skimpy-aqua-collie.sh
+        container: qc.doc_skanky-pumpkin-llama
+      github.com/eosc-synergy/saps-common markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.fuzzy-sepia-lemming.sh
-        container: qc.doc_breezy-azure-fousek
+        - /usr/bin/env sh .sqa/script.snoopy-ruby-mandrill.sh
+        container: qc.doc_silly-cardinal-bird
   QC.Lic:
     repos:
-      github.com/EOSC-synergy/saps-common licensee:
+      github.com/eosc-synergy/saps-common licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.sleazy-grey-shrew.sh
-        container: qc.lic_slaphappy-ruby-snail
+        - /usr/bin/env sh .sqa/script.droopy-cinnamon-hornet.sh
+        container: qc.lic_cheeky-beige-starfish
   QC.Sec:
     repos:
-      github.com/EOSC-synergy/saps-common bandit:
+      github.com/eosc-synergy/saps-common bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.flimsy-yellow-sheepdog.sh
-        container: qc.sec_tasty-harlequin-pig
+        - /usr/bin/env sh .sqa/script.nerdy-sepia-orangutan.sh
+        container: qc.sec_snippy-fuchsia-pinscher
   QC.Sty:
     repos:
-      github.com/EOSC-synergy/saps-common flake8:
+      github.com/eosc-synergy/saps-common checkstyle:
         commands:
-        - /usr/bin/env sh .sqa/script.foggy-khaki-jellyfish.sh
-        container: qc.sty_gamy-taupe-hyena
+        - /usr/bin/env sh .sqa/script.slaphappy-cyan-centipede.sh
+        container: qc.sty_surly-ruby-ray
+      github.com/eosc-synergy/saps-common flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.trippy-taupe-uguisu.sh
+        container: qc.sty_cloudy-beige-bracke
+      github.com/eosc-synergy/saps-common hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.crabby-gamboge-duck.sh
+        container: qc.sty_woozy-ruby-newfoundland
+      github.com/eosc-synergy/saps-common jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.cheeky-celadon-manatee.sh
+        container: qc.sty_muzzy-zucchini-mammoth
   QC.Ver:
     repos:
-      github.com/EOSC-synergy/saps-common get_git_tags.py:
+      github.com/eosc-synergy/saps-common get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.tacky-violet-lionfish.sh
-        container: qc.ver_blurry-aqua-camel
-timeout: 1800
+        - /usr/bin/env sh .sqa/script.gamy-brass-squid.sh
+        container: qc.ver_homey-mauve-cuttlefish
+timeout: 5400
