@@ -4,67 +4,67 @@ config:
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: release/1.7.10
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
-    github.com/eosc-synergy/saps-common:
+    github.com/orviz/saps-common:
       branch: develop
-      repo: https://github.com/eosc-synergy/saps-common
+      repo: https://github.com/orviz/saps-common
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      github.com/eosc-synergy/saps-common git:
+      github.com/orviz/saps-common git:
         commands:
-        - /usr/bin/env sh .sqa/script.scanty-rust-eagle.sh
-        container: qc.acc_cozy-denim-barb
+        - /usr/bin/env sh .sqa/script.cozy-yellow-affenpinscher.sh
+        container: qc.acc_skimpy-buff-jaguar
   QC.Doc:
     repos:
-      github.com/eosc-synergy/saps-common find_doc_files.py:
+      github.com/orviz/saps-common find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.trippy-orchid-dragonfly.sh
-        container: qc.doc_seedy-pink-goat
-      github.com/eosc-synergy/saps-common git:
+        - /usr/bin/env sh .sqa/script.smelly-olivine-akita.sh
+        container: qc.doc_slaphappy-auburn-jellyfish
+      github.com/orviz/saps-common git:
         commands:
-        - /usr/bin/env sh .sqa/script.skimpy-aqua-collie.sh
-        container: qc.doc_skanky-pumpkin-llama
-      github.com/eosc-synergy/saps-common markdownlint:
+        - /usr/bin/env sh .sqa/script.dorky-khaki-lizard.sh
+        container: qc.doc_flaky-yellow-tarantula
+      github.com/orviz/saps-common markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.snoopy-ruby-mandrill.sh
-        container: qc.doc_silly-cardinal-bird
+        - /usr/bin/env sh .sqa/script.shabby-amaranth-tarsier.sh
+        container: qc.doc_flaky-amethyst-pig
   QC.Lic:
     repos:
-      github.com/eosc-synergy/saps-common licensee:
+      github.com/orviz/saps-common licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.droopy-cinnamon-hornet.sh
-        container: qc.lic_cheeky-beige-starfish
+        - /usr/bin/env sh .sqa/script.skimpy-ecru-fox.sh
+        container: qc.lic_woolly-amaranth-dunker
   QC.Sec:
     repos:
-      github.com/eosc-synergy/saps-common bandit:
+      github.com/orviz/saps-common bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.nerdy-sepia-orangutan.sh
-        container: qc.sec_snippy-fuchsia-pinscher
+        - /usr/bin/env sh .sqa/script.lovely-olivine-molly.sh
+        container: qc.sec_surly-puce-kangaroo
   QC.Sty:
     repos:
-      github.com/eosc-synergy/saps-common checkstyle:
+      github.com/orviz/saps-common checkstyle:
         commands:
-        - /usr/bin/env sh .sqa/script.slaphappy-cyan-centipede.sh
-        container: qc.sty_surly-ruby-ray
-      github.com/eosc-synergy/saps-common flake8:
+        - /usr/bin/env sh .sqa/script.whiny-black-opossum.sh
+        container: qc.sty_lumpy-buff-ladybird
+      github.com/orviz/saps-common flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.trippy-taupe-uguisu.sh
-        container: qc.sty_cloudy-beige-bracke
-      github.com/eosc-synergy/saps-common hadolint:
+        - /usr/bin/env sh .sqa/script.hasty-amber-snake.sh
+        container: qc.sty_nerdy-violet-quoll
+      github.com/orviz/saps-common hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.crabby-gamboge-duck.sh
-        container: qc.sty_woozy-ruby-newfoundland
-      github.com/eosc-synergy/saps-common jsonlint:
+        - /usr/bin/env sh .sqa/script.zippy-russet-termite.sh
+        container: qc.sty_jumpy-chestnut-cuscus
+      github.com/orviz/saps-common jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.cheeky-celadon-manatee.sh
-        container: qc.sty_muzzy-zucchini-mammoth
+        - /usr/bin/env sh .sqa/script.fuzzy-crimson-seahorse.sh
+        container: qc.sty_pasty-copper-squid
   QC.Ver:
     repos:
-      github.com/eosc-synergy/saps-common get_git_tags.py:
+      github.com/orviz/saps-common get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.gamy-brass-squid.sh
-        container: qc.ver_homey-mauve-cuttlefish
+        - /usr/bin/env sh .sqa/script.snippy-jade-echidna.sh
+        container: qc.ver_slaphappy-beige-insect
 timeout: 5400
